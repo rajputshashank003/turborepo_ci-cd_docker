@@ -1,4 +1,4 @@
-name: Deploy the backend
+name: Deploy the websocket-ws
 on:
   push:
     branch: [ main ]
@@ -19,6 +19,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./docker/Dockerfile.api
+          file: ./docker/Dockerfile.ws
           push: true
-          tags: rajputshashank/turborepo_ci-cd_docker-api:${{ github.sha }}
+          tags: rajputshashank/turborepo_ci-cd_docker-ws:${{ github.sha }}
